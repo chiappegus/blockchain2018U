@@ -15,6 +15,12 @@ class Car {
 	    "test": "mocha"
 	  },*/
 
+
+
+
+//////////////////////////////////
+/*
+
 let car;
 beforeEach(()=>{
 	//console.log('a');
@@ -24,18 +30,19 @@ beforeEach(()=>{
 describe('Car',()=>
 {
 	it('can park ',()=>{
-		/*aca va la posta */
+		//aca va la posta 
 		//const car = new Car();
 		assert.equal(car.park(),'stopped');
 	})
 
 	it('can drive ', ()=>{
-		/*aca va la posta */
+		//aca va la posta 
 		//const car = new Car();
 		assert.equal(car.drive(),'vroom');
 	})
 })
 
 
-
+*/
+/////////////////////////////////////////////////
 
