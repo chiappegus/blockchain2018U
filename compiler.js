@@ -17,6 +17,8 @@ https://stackoverflow.com/questions/48298361/npm-install-failed-at-the-node-sass
 
  C:\Users\hpgus\Documents\curso_desarrollo de blockchain\EthereumCasts\inbox_mio>npm cache clean --force && npm install node-sass
 npm WARN using --force I sure hope you know what you are doing.
+para correr el equipo poner
+node compiler.js
 */
 const path = require('path');
 const fs = require('fs');
@@ -27,6 +29,9 @@ const inboxPath = path.resolve(__dirname , 'contracts' , 'Inbox.sol');
 
 const source = fs.readFileSync(inboxPath, 'utf8');
 
-//console.log(solc.compile(source,1));
+//console.log(solc.compile(source,1)); node compiler.js
+//console.log(solc.compile(source,1).contracts[':Inbox']); node compiler.js
+//module.exports = solc.compile(source,1); node compiler.js
+//console.log(solc.compile(source,1).contracts[':Inbox']);
+module.exports = solc.compile(source,1).contracts[':Inbox'];
 
-module.exports = solc.compile(source,1).contracts[:Inbox];
