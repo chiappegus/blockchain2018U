@@ -4,22 +4,19 @@ const ganache = require('ganache-cli');
 const Web3 = require('web3');
 const web3= new Web3(ganache.provider());
 
+let accounts;
 
-beforeEach(()=>{
-	// get a list of all accounts
+beforeEach(async()=>{
 
-	web3.eth.getAccounts()
-		.then(fechtedAccounts=>{
-			
-			console.log(fechtedAccounts);
-		}
-			)
+
+	accounts = await web3.eth.getAccounts();
 	
 
 });
 
 describe('Inbox',()=>{
 	it('deploys a contract',()=>{
+		console.log(accounts);
 
 	});
 });
