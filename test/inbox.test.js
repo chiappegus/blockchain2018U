@@ -8,6 +8,8 @@ const {interface , bytecode} = require('../compiler');
 let accounts;
 let inbox;
 
+const INITIAL_STRING = 'Hi there!'
+
 
 // npm run test
 beforeEach(async()=>{
@@ -30,6 +32,16 @@ describe('Inbox',()=>{
 	it('deploys a contract',()=>{
 		//console.log(inbox);
 		assert.ok(inbox.options.address);
+
+	});
+
+	it('has a default message',async()=>{
+
+		const message = await inbox.methods.message().call();
+		//console.log(message);
+		assert.equal(message,'Hi there!')
+		 
+		
 
 	});
 });
